@@ -1,0 +1,23 @@
+/* Tipografía estipulada*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+/* Paleta de colores estipulada*/
+
+:root{
+    --red-color: rgb(164,1,1);
+    --blue-color: rgb(44,163,171);
+    --gray-color: rgb(196,196,196);
+    --orange-color: rgb(243,97,14);
+    --darkblue-color: rgb(29,27,69);
+}
+
+/* Propiedades generales*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
