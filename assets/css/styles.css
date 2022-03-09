@@ -40,8 +40,9 @@ a {
 header {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     margin: 1rem 0;
-    max-width: 1098px;
+    width: 100%;
 }
 
 .logo {
@@ -50,7 +51,7 @@ header {
     justify-content: flex-end;
     flex-basis: 35%;
     flex-direction: row;
-    padding: 0 30px 30px;
+    padding: 30px 0 0;
     margin: 1rem 0;
 }
 
@@ -66,7 +67,7 @@ header {
 .h-content{
     display: flex;
     align-items: center;
-    flex-basis: 55%;
+    flex-basis: 70%;
     flex-flow: wrap row;
     justify-content: flex-end;
     color: var(--gray-color); 
@@ -79,9 +80,17 @@ header {
     margin: .2rem;
 }
 
-.h-content i {
-    color: rgb(243,97,14);
+#icon1 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243,97,14);
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px var(--gray-color);
+    color: white;
+    height: 25px;
+    padding: .1rem;
     margin: .2rem;
+    width: 25px;
 }
 
 .h-content img {
@@ -110,6 +119,9 @@ header {
     transition: all 1s;
 }
 
+.doctor {
+    margin-bottom: 0;
+}
 
 .f-doctor {
     position: relative;
@@ -139,30 +151,52 @@ header {
     font-weight: 300;
 }
 
-.division img{
+#division {
+    margin: 0;
+}
+
+#division img{
+    height: 100%;
     width: 100%;
 }
 
-.info-box {
+.b-fondo-i {
+    background-image: url(../img/4.\ covid.jpeg);
+    background-repeat:repeat-x;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    opacity: .2;
+    position: relative;
+    width: 100%;
+}
+
+.info {
+    margin-top: 0;
+}
+
+#info-box {
     display: flex;
     padding: 1rem;
     flex-wrap: wrap;
     justify-content:space-around;
+    margin-top: -450px;
+    opacity: 1;
 }
 
 .info-box h3{
     color: var(--darkblue-color);
 }
 
-.t-contenido{
+#t-contenido{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.t-contenido img {
-    max-width: 25px;
-    max-height: 25px;
+#t-contenido img {
+    max-width: 50px;
+    max-height: 50px;
     margin-right: .5rem;
 }
 
@@ -208,6 +242,7 @@ header {
 
 .enlaces {
     background-color: var(--gray-color);
+    margin-top: 50px;
 }
 
 .enlaces p {
@@ -223,17 +258,17 @@ header {
     transition: all 2s;
 }
 
-.oms {
+#oms {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-.oms img {
+#oms img {
     width: 150px;
 }
 
-.oms P {
+#oms P {
     color: var(--blue-color);
     text-decoration-line: underline;
 }
@@ -542,8 +577,7 @@ form {
     background-color: #181926;
     display: flex;
     flex-direction: column;
-    max-width: 2000px;
-    margin: 0 1rem 1rem;
+    margin: 0 1rem;
 }
 
 .p-1 {
@@ -565,17 +599,19 @@ form {
     width: 50px;
 }
 
+.p-botones button:hover{
+    border: 2px solid var(--orange-color);
+}
+
 .p-division {
     display: flex;
-    padding: 0;
+    margin: 0;
 }
 
 .p-division img {
     border-bottom: 7px solid var(--blue-color);
     display: flex;
     width: 100%;
-    /* height: 100%; */
-    /* max-width: 1069px; */
     max-height: 200px;
 }
 
