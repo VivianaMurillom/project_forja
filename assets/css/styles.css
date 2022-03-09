@@ -284,6 +284,12 @@ footer p{
     align-items: center;
 }
 
+.volver:hover {
+    background-color: var(--blue-color);
+    border: 1px solid var(--darkblue-color);
+    transition: all 1s;
+}
+
 form {
     align-items: center;
     display: flex;
