@@ -135,9 +135,14 @@ header {
     transition: all 1s;
 }
 
-.boton-inicio img {
+.divisor{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.divisor img {
     max-width: 730px;
-    width: 90%;
+    width: 100%;
 }
 
 .doctor {
@@ -205,9 +210,6 @@ header {
 	left: 0;
 	right: 0;
 	background-color: rgba(255, 254, 254, 0.7);
-}
-
-.info {
 }
 
 #info-box {
@@ -855,4 +857,43 @@ table td {
     display: flex;
     justify-content: center;
     margin: 1rem;
+}
+
+/*Resolución de medias (equipos de escritorio)*/
+@media screen and (min-width: 1024px) {
+    /* Index.html*/
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .logo {
+        margin-right: 1rem;
+    }
+
+    .h-content{
+        flex-direction: row;
+    }
+
+    .direccion {
+        max-width: 290px;
+    }
+
+    .boton-inicio {
+        align-items: flex-end;
+        justify-content: center;
+        max-width: 300px;
+    }
+
+    .boton-inicio img {
+        width: 100%;
+    }
+
+    .sesion {
+        margin: 2rem 1rem;
+    }
+
+    .f-doctor {
+        background-image: url(../img/2.\ medico.png);
+    }
 }
