@@ -652,6 +652,7 @@ form {
     background-color: #181926;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .p-1 {
@@ -816,10 +817,11 @@ table td[data-titulo]::before {
     border-radius: 5px;
     color: white;
     display: flex;
+    font-weight: 500;
     justify-content: center;
     padding: .5rem 0;
+    text-align: center;
     text-transform: uppercase;
-    font-weight: 500;
 }
 
 .form-registro {
@@ -848,6 +850,7 @@ table td[data-titulo]::before {
     justify-content: center;
     margin: 2rem 0;
     padding: .2rem 0;
+    text-align: center;
     text-transform: uppercase;
     width: 100%;
 }
@@ -857,10 +860,9 @@ table td[data-titulo]::before {
     color: black;
     display: flex;
     height: 20px;
+    margin-right: .1rem;
     justify-content: flex-start;
-    position: absolute;
     width: 20px;
-    margin-left: -1100px;
 }
 
 #sub-h1 {
@@ -873,15 +875,15 @@ table td[data-titulo]::before {
 
 .form-part1 {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
 }
 
 .form-part1 input {
     margin: .4rem;
     min-height: 30px;
-    width: 200px;
+    width: 100%;
 }
 
 .form-part2, .form-part3 {
@@ -892,20 +894,22 @@ table td[data-titulo]::before {
 
 .subdiv {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-between;
 }
 
 .subdiv input, .subdiv select {
     min-height: 30px;
-    width: 45%;
+    width: 100%;
 }
 
 .form-part4 input, .form-part4 select{
     min-height: 30px;
+    width: 100%;
 }
 
 .selector {
+    align-items: center;
     display: flex;
     justify-content: center;
 }
@@ -1024,8 +1028,8 @@ table td[data-titulo]::before {
 
     /* Pacientes.html*/
     .p-header {
-        display: initial;
         flex-direction: column;
+        margin-top: 0;
     }
 
     .p-1 {
@@ -1066,6 +1070,57 @@ table td[data-titulo]::before {
     table td[data-titulo]::before {
         content: none;
         margin-right: 0;
+    }
+
+    .botones-funciones {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .editar, .eliminar {
+        align-items: center;
+        display: flex;
+        margin: 0 .2rem;
+        padding: .4rem;
+        text-align: center;
+    }
+    
+    .editar i, .eliminar i {
+        margin-left: .2rem;
+    }
+
+     /* pacientesRegistro.html*/
+
+     .form-registro form{
+        justify-content: center;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+     .form-part1 {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .form-part1 input {
+        width: 200px;
+    }
+    
+    .form-part4{
+        display: flex;
+    }
+
+    .subdiv {
+        flex-flow: row wrap;
+    }
+
+    .subdiv input, .subdiv select {
+        width: 45%;
+    }
+
+    .form-part4 input, .form-part4 select{
+        width: 100%;
     }
 
 }
