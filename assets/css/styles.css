@@ -151,14 +151,17 @@ header {
 }
 
 .f-doctor {
-    background-image: url(../img/medico-fondo-celular.png);
+    background-image: url(../img/medico.png);
+    background-size: cover;
 }
 
 .mensaje {
-    align-items:flex-start;
+    align-items: center;
     display: flex;
     flex-direction: column;
     margin: 1rem;
+    max-width: 400px;
+    text-align: center;
 }
 
 .mensaje-boton {
@@ -174,6 +177,7 @@ header {
 
 .t2 {
     font-weight: 300;
+    text-align: center;
 }
 
 #division {
@@ -194,7 +198,7 @@ header {
 } */
 
 .b-fondo-i {
-    background-image: url(../img/4.\ covid.jpeg);
+    background-image: url(../img/covid.jpeg);
 	text-align: center;
 	background-position: center center;
 	background-size: cover;
@@ -217,7 +221,8 @@ header {
     padding: 1rem;
     flex-wrap: wrap;
     justify-content:space-around;
-    opacity: 1;
+    opacity: 1 !important; 
+    z-index: 100;
 }
 
 .info-box h3{
@@ -263,7 +268,7 @@ header {
     width: 15px;
     height: 15px;
     position: absolute;
-    background-image: url("../img/6.\ check.svg");
+    background-image: url("../img/check.svg");
     background-size: cover;
     background-position: center;
     left: 0;
@@ -330,21 +335,32 @@ footer p{
 
 .b-login {
     align-items: center;
-    background-image: url(../img/10.png);
+    background-image: url(../img/fondo-form.png);
+}
+
+.login {
+    justify-content: center;
+    display: flex;
 }
 
 #ingreso {
-    align-items: center;
+    align-content: center;
     display: flex;
     flex-direction: column;
-    font-weight:400;
+    font-weight: 400;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
     padding: 2rem;
 }
 
 .b-volver {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    max-width: 560px;
+    width: 100%;
 }
 
 .volver {
@@ -369,6 +385,8 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 540px;
+    width: 100%;
 }
 
 .h-form {
@@ -376,7 +394,8 @@ form {
     box-shadow: 3px 3px 15px rgb(44, 44, 44);
     display: flex;
     flex-direction: column;
-    width: 500px;
+    max-width: 520px;
+    width: 100%;
 }
 
 .logo-form{
@@ -386,6 +405,10 @@ form {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+}
+
+.logo-form img {
+    width: 100%;
 }
 
 .form1 {
@@ -439,24 +462,36 @@ form {
     display: flex;
     flex-direction: row;
     margin: 0;
-    height: 100%;
-    width: 100%;
 }
 
 .opciones {
     background-color: #181926;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    padding: 2rem 0;
+    justify-content: flex-end;
+    padding: .5rem;
     position: fixed;
+}
+
+.btn-menu {
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#chk-menu {
+    display: none;
+}
+
+#chk-menu:checked ~ .o-item {
+    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .i-form {
     display: flex;
     flex-direction: column;
-    margin: .4rem;
 }
 
 .w-user{
@@ -465,7 +500,7 @@ form {
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    margin-left: 850px;
+    margin-left: 110px;
     width: 200px;
 }
 
@@ -485,20 +520,25 @@ form {
 }
 
 .o-img img {
+    align-items: flex-start;
+    display: none;
+    justify-content: center;
     margin: 2rem 0;
+    width: 100vw;
 }
 
 .o-item {
-    align-items: center;
+    align-items: flex-start;
     background-color: var(--gray-color);
     border: 3px solid  var(--orange-color);
     border-radius: 15px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     margin: 0.8rem 0;
     text-align: center;
     padding: .5rem;
+    width: 100vw;
 }
 
 .o-item p {
@@ -512,9 +552,19 @@ form {
     flex-direction: column;
     height: 100%;
     justify-content: space-around;
-    margin-left: 254px;
-    padding: 0 1rem;
     width: 100%;
+}
+
+.ingresar {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem;
 }
 
 .ingresar input {
@@ -859,6 +909,10 @@ table td {
     margin: 1rem;
 }
 
+/*Resolución de tablet*/
+/* @media screen and (min-width: 768px) {
+} */
+
 /*Resolución de medias (equipos de escritorio)*/
 @media screen and (min-width: 1024px) {
     /* Index.html*/
@@ -893,7 +947,24 @@ table td {
         margin: 2rem 1rem;
     }
 
-    .f-doctor {
-        background-image: url(../img/2.\ medico.png);
+    #info-box {
+        padding: 1rem;
+        flex-wrap: nowrap;
+    }
+
+    .signos {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 31.25rem;
+    }
+
+    .pregunta {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 31.25rem;
     }
 }
