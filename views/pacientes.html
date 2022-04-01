@@ -12,7 +12,7 @@
 
     <header class="p-header">
         <div class="p-1">
-            <img src="../assets/img/0. logoforja.png" alt="Logo Forja">
+            <img src="../assets/img/logoforja.png" alt="Logo Forja">
             <div class="p-botones">
                 <a href="../index.html"><button><i class="fa-solid fa-house-user"></i></button></a>
                 <a href="dashboard.html"><button><i class="fa-solid fa-power-off"></i></button></a>
@@ -20,7 +20,7 @@
         </div>
         
         <div class="p-division">
-            <img src="../assets/img/12. franja.svg" alt="division">
+            <img src="../assets/img/franja.svg" alt="division">
         </div>
 
     </header>
@@ -43,81 +43,84 @@
 
             <div class="p-table">
                 <table>
-                    <tr>
-                        <th># de Registro</th>
-                        <th># de Documento</th>
-                        <th>Nombres</th>
-                        <th>Apellidos</th>
-                        <th>Edad</th>
-                        <th>Acciones</th>
-                    </tr>
-
-                    <tr>
-                        <td>1234</td>
-                        <td>56839928</td>
-                        <td>Gregorio</td>
-                        <td>Manriquez</td>
-                        <td>40</td>
-                        <td>
-                            <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
-                            <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1235</td>
-                        <td>1239003874</td>
-                        <td>Andrea</td>
-                        <td>Lopez</td>
-                        <td>26</td>
-                        <td>
-                            <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
-                            <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1236</td>
-                        <td>399023</td>
-                        <td>Anatolio</td>
-                        <td>Perez</td>
-                        <td>81</td>
-                        <td>
-                            <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
-                            <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1237</td>
-                        <td>389023</td>
-                        <td>Maria</td>
-                        <td>Perea</td>
-                        <td>79</td>
-                        <td>
-                            <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
-                            <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1238</td>
-                        <td>1238394903</td>
-                        <td>Oscar</td>
-                        <td>Vivas</td>
-                        <td>24</td>
-                        <td>
-                            <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
-                            <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1239</td>
-                        <td>1293034849</td>
-                        <td>Ana</td>
-                        <td>Tique</td>
-                        <td>23</td>
-                        <td>
-                            <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
-                            <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
-                        </td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th># de Registro</th>
+                            <th># de Documento</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Edad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-titulo="Registro">1234</td>
+                            <td data-titulo="Documento">56839928</td>
+                            <td data-titulo="Nombres">Gregorio</td>
+                            <td data-titulo="Apellidos">Manriquez</td>
+                            <td data-titulo="Edad">40</td>
+                            <td class="botones-funciones">
+                                <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
+                                <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-titulo="Registro">1235</td>
+                            <td data-titulo="Documento">1239003874</td>
+                            <td data-titulo="Nombres">Andrea</td>
+                            <td data-titulo="Apellidos">Lopez</td>
+                            <td data-titulo="Edad">26</td>
+                            <td class="botones-funciones">
+                                <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
+                                <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-titulo="Registro">1236</td>
+                            <td data-titulo="Documento">399023</td>
+                            <td data-titulo="Nombres">Anatolio</td>
+                            <td data-titulo="Apellidos">Perez</td>
+                            <td data-titulo="Edad">81</td>
+                            <td class="botones-funciones">
+                                <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
+                                <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-titulo="Registro">1237</td>
+                            <td data-titulo="Documento">389023</td>
+                            <td data-titulo="Nombres">Maria</td>
+                            <td data-titulo="Apellidos">Perea</td>
+                            <td data-titulo="Edad">79</td>
+                            <td class="botones-funciones">
+                                <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
+                                <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-titulo="Registro">1238</td>
+                            <td data-titulo="Documento">1238394903</td>
+                            <td data-titulo="Nombres">Oscar</td>
+                            <td data-titulo="Apellidos">Vivas</td>
+                            <td data-titulo="Edad">24</td>
+                            <td class="botones-funciones">
+                                <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
+                                <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-titulo="Registro">1239</td>
+                            <td data-titulo="Documento">1293034849</td>
+                            <td data-titulo="Nombres">Ana</td>
+                            <td data-titulo="Apellidos">Tique</td>
+                            <td data-titulo="Edad">23</td>
+                            <td class="botones-funciones">
+                                <button class="editar">Editar<i class="fa-solid fa-pen"></i></button>
+                                <button class="eliminar">Eliminar<i class="fa-solid fa-x"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </section>

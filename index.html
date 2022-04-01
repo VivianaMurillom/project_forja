@@ -11,69 +11,81 @@
 <body>
     <header>
         <div class="logo">
-            <img class="logo1" src="/assets/img/0. logoforja.png" alt="Logo de Forja">
+            <img class="logo1" src="/assets/img/logoforja.png" alt="Logo de Forja">
             <img class="jeringa" src="/assets/img/jeringa.png" alt="Imagen de jeringa">
         </div>
         <div class="h-content">
-            <i class="fa-solid fa-phone" id="icon1"></i>
-            <p>601 744 7050</p>
-            <i class="fa-solid fa-location-dot" id="icon1"></i>
-            <p>Carrera 21 # 98-71 Segundo Piso Bogotá - Colombia</p>
+            <div class="telefono">
+                <i class="fa-solid fa-phone" id="icon1"></i>
+                <p>601 744 7050</p>
+            </div>
+            <div class="direccion">
+                <i class="fa-solid fa-location-dot" id="icon1"></i>
+                <p>Carrera 21 # 98-71 Segundo Piso Bogotá - Colombia</p>
+            </div>
+        </div>
+        <div class="boton-inicio">
             <button class="sesion"><a href="/views/login.html">Iniciar Sesión<i class="fa-solid fa-user"></i></a></button>
-            <img src="/assets/img/1. linea.png" alt="Imagen de línea"> 
         </div>
     </header>
+
+    <div class="divisor">
+        <img src="/assets/img/linea.png" alt="Imagen de línea"> 
+    </div>
 
     <main>
         <section >
             <article class="doctor">
                 <div class="f-doctor">
-                    <img src="../assets/img/2. medico.png" alt="Imagen de fondo de médico">
+                    <!-- <img src="../assets/img/2. medico.png" alt="Imagen de fondo de médico"> -->
                     <div class="mensaje">
                         <h1 class="t1">Unidos ganaremos la batalla</h1>
                         <h1 class="t2">Covid-19</h1>
-                        <button class="sesion"><a href="/views/login.html">Iniciar Sesión<i class="fa-solid fa-user"></i></a></button>
+                        <div class="mensaje-boton">
+                            <button class="sesion mensaje-b"><a href="/views/login.html">Iniciar Sesión<i class="fa-solid fa-user"></i></a></button>
+                        </div>
                     </div>
                 </div>
             </article>
 
             <div id="division">
-                <img src="../assets/img/12. franja.svg" alt="division">
+                <img src="../assets/img/franja.svg" alt="division">
             </div>
 
             <article class="info">
                 <div class="b-fondo-i">
-                    <!-- <img src="../assets/img/4. covid.jpeg" alt="Imagen de fondo"> -->
-                </div>
+                    <!-- <img src="../assets/img/4. covid.jpeg" alt="Imagen de fondo" class="bg-image"> -->
+                
+                    <div id="info-box">
+                        <div class="signos">
+                            <div id="t-contenido">
+                                <img src="/assets/img/flechaderecha.svg" alt="Icono de flecha derecha">
+                                <h3>Signos compatibles con Covid-19</h3>
+                            </div>
+                            <ul class="sintomas">
+                                <li>Fiebre de 37.5° o más.</li>
+                                <li>Dolor de garganta.</li>
+                                <li>Tos y dificultad respiratoria</li>
+                                <li>Dolor de cabeza.</li>
+                                <li>Vómito y diarrea</li>
+                            </ul>
+                        </div>
 
-                <div id="info-box">
-                    <div class="signos">
-                        <div id="t-contenido">
-                            <img src="/assets/img/7. flechaderecha.svg" alt="Icono de flecha derecha">
-                            <h3>Signos compatibles con Covid-19</h3>
-                        </div>
-                        <ul class="sintomas">
-                            <li>Fiebre de 37.5° o más.</li>
-                            <li>Dolor de garganta.</li>
-                            <li>Tos y dificultad respiratoria</li>
-                            <li>Dolor de cabeza.</li>
-                            <li>Vómito y diarrea</li>
-                        </ul>
-                    </div>
-                    <div class="pregunta">
-                        <div id="t-contenido">
-                            <img src="/assets/img/8. question-circle-solid.svg" alt="Icono de pregunta">
-                            <h3>¿Qué hacer?</h3>
-                        </div>
-                        <p>Si diagnosticas más de dos síntomas, aisla de inmediato al paciente y procede a realizar cuanto antes el hisopado para confirmar o descartar COVID 19.</p>
-                        <div id="oms">
-                            <img src="/assets/img/5. oms.png" alt="Logo de OMS">
-                            <p class="oms">Curso online nuevo coronavirus OMS</p>
+                        <div class="pregunta">
+                            <div id="t-contenido">
+                                <img src="/assets/img/question-circle-solid.svg" alt="Icono de pregunta">
+                                <h3>¿Qué hacer?</h3>
+                            </div>
+                            <p>Si diagnosticas más de dos síntomas, aisla de inmediato al paciente y procede a realizar cuanto antes el hisopado para confirmar o descartar COVID 19.</p>
+                            <div id="oms">
+                                <img src="/assets/img/oms.png" alt="Logo de OMS">
+                                <p class="oms">Curso online nuevo coronavirus OMS</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </article>
+            
             <article class="enlaces">
                 <p>Enfermedad por coronavirus (COVID-19): Accesibilidad y asignación de vacunas</p>
                 <p>Seguridad de las vacunas conttra el COVID-19 ‖ CDC</p>
