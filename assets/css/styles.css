@@ -189,14 +189,6 @@ header {
     width: 100%;
 }
 
-/* .b-fondo-i {
-    /* background-image: url(../img/4.\ covid.jpeg);
-    background-repeat: repeat-x repeat-y;
-    display: flex;
-    justify-content: center;
-    opacity: .2;
-} */
-
 .b-fondo-i {
     background-image: url(../img/covid.jpeg);
 	text-align: center;
@@ -206,7 +198,7 @@ header {
 	position: relative;
 }
 
-.b-fondo-i::before {
+/* .b-fondo-i::before {
     content:'';
 	position: absolute;
     top: 0;
@@ -214,14 +206,14 @@ header {
 	left: 0;
 	right: 0;
 	background-color: rgba(255, 254, 254, 0.7);
-}
+} */
 
 #info-box {
+    background-color: rgba(255, 254, 254, 0.7);
     display: flex;
     padding: 1rem;
     flex-wrap: wrap;
     justify-content:space-around;
-    opacity: 1 !important; 
     z-index: 100;
 }
 
@@ -460,7 +452,7 @@ form {
 
 #dashboard {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0;
 }
 
@@ -470,26 +462,10 @@ form {
     flex-direction: column;
     justify-content: flex-end;
     padding: .5rem;
-    position: fixed;
-}
-
-.btn-menu {
-    color: white;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
-#chk-menu {
-    display: none;
-}
-
-#chk-menu:checked ~ .o-item {
-    display: block;
-    display: flex;
-    flex-direction: column;
 }
 
 .i-form {
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
@@ -500,6 +476,7 @@ form {
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
     margin-left: 110px;
     width: 200px;
 }
@@ -521,30 +498,38 @@ form {
 
 .o-img img {
     align-items: flex-start;
-    display: none;
     justify-content: center;
     margin: 2rem 0;
-    width: 100vw;
+    width: 100%;
+}
+
+.o-opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .o-item {
-    align-items: flex-start;
+    align-items: center;
     background-color: var(--gray-color);
     border: 3px solid  var(--orange-color);
-    border-radius: 15px;
-    display: none;
-    flex-direction: column;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     margin: 0.8rem 0;
+    min-height: 50px;
+    min-width: 200px;
     text-align: center;
-    padding: .5rem;
-    width: 100vw;
+    padding: .2rem;
 }
 
-.o-item p {
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0;
+.o-item i{
+    margin-right: .5rem;
+}
+
+.o-item a {
+    color: #181926;
 }
 
 .bienvenida {
@@ -590,8 +575,9 @@ form {
 }
 
 .b-fondo img {
-    width: 330px;
-    height: 330px;
+    max-width: 330px;
+    max-height: 330px;
+    width: 90%;
     opacity: 0.4;
 }
 
@@ -666,12 +652,12 @@ form {
     background-color: #181926;
     display: flex;
     flex-direction: column;
-    margin: 0 1rem;
 }
 
 .p-1 {
+    align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
 }
@@ -707,7 +693,7 @@ form {
 .p-section {
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     margin: 2rem 0;
 }
@@ -760,6 +746,18 @@ form {
 table {
     background-color: var(--blue-color);
     text-align: center;
+    width: 100%;
+}
+
+table tr {
+    border: 1px solid var(--gray-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+table thead {
+    display: none;
 }
 
 table th {
@@ -772,6 +770,16 @@ table th {
 table td {
     background-color: var(--gray-color);
     padding: .5rem 2rem;
+}
+
+table td [data-titulo] {
+    display: flex;
+}
+
+table td[data-titulo]::before {
+    content: attr(data-titulo);
+    font-weight: bold;
+    margin-right: 8px;
 }
 
 .editar {
@@ -793,7 +801,6 @@ table td {
 .editar i, .eliminar i {
     padding: .2rem;
 }
-
 
 /* pacientesRegistro.html*/
 
@@ -910,8 +917,35 @@ table td {
 }
 
 /*Resolución de tablet*/
-/* @media screen and (min-width: 768px) {
-} */
+ @media screen and (min-width: 768px) {
+     /* dashboard.html*/
+
+     .opciones {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+
+    .o-img {
+        align-items: center;
+        display: flex;
+    }
+
+    .o-img img {
+        max-height: 75px;
+    }
+
+    .w-user{
+        margin-left: 420px;
+    }
+
+    /* Pacientes.html*/
+
+    table {
+        width: 50%;
+    }
+    
+}
 
 /*Resolución de medias (equipos de escritorio)*/
 @media screen and (min-width: 1024px) {
@@ -967,4 +1001,71 @@ table td {
         justify-content: center;
         width: 31.25rem;
     }
+
+    /* dashboard.html*/
+
+    #dashboard {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .opciones {
+        background-color: #181926;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: .5rem;
+    }
+
+    .w-user {
+        margin-left: 700px;
+    }
+
+    /* Pacientes.html*/
+    .p-header {
+        display: initial;
+        flex-direction: column;
+    }
+
+    .p-1 {
+        flex-direction: row;
+    }
+
+    .p-section {
+        flex-direction: row;
+    }
+
+    table {
+        display: table;
+        width: 0%;
+    }
+
+    table tr {
+        border: none;
+        display:table-row;
+        padding: 0;
+    }
+    
+    table thead {
+        display: table-header-group;
+    }
+
+    table tbody  {
+        display: table-row-group;
+    }
+
+    table td, table th {
+        display: table-cell;
+    }
+
+    table td [data-titulo] {
+        display: initial;
+    }
+    
+    table td[data-titulo]::before {
+        content: none;
+        margin-right: 0;
+    }
+
 }
