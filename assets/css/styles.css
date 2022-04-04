@@ -1246,5 +1246,12 @@ table td[data-titulo]::before {
     .form-part4 input, .form-part4 select{
         width: 100%;
     }
+}
 
+/*Resolución macro*/
+@media screen and (min-width: 1200px) {
+    body{
+        margin: 0 auto;
+        max-width: 1024px;
+    }
 }
